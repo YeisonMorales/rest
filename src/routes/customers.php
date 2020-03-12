@@ -36,8 +36,8 @@ $app->get('/api/users', function(Request $request, Response $response){
 });
 
 // Get Single Customer
-$app->get('/api/user/{cedula}', function(Request $request, Response $response){
-    $id = $request->getAttribute('cedula');
+$app->get('/api/user/{id}', function(Request $request, Response $response){
+    $id = $request->getAttribute('id');
 
     $sql = "SELECT * FROM customers WHERE cedula = $cedula";
 
