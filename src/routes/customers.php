@@ -17,8 +17,8 @@ $app->add(function ($req, $res, $next) {
 });
 
 // Get All Customers
-$app->get('/api/customers', function(Request $request, Response $response){
-    $sql = "SELECT * FROM customers";
+$app->get('/api/users', function(Request $request, Response $response){
+    $sql = "SELECT * FROM usuario";
 
     try{
         // Get DB Object
@@ -36,10 +36,10 @@ $app->get('/api/customers', function(Request $request, Response $response){
 });
 
 // Get Single Customer
-$app->get('/api/customer/{id}', function(Request $request, Response $response){
-    $id = $request->getAttribute('id');
+$app->get('/api/user/{cedula}', function(Request $request, Response $response){
+    $id = $request->getAttribute('cedula');
 
-    $sql = "SELECT * FROM customers WHERE id = $id";
+    $sql = "SELECT * FROM customers WHERE cedula = $cedula";
 
     try{
         // Get DB Object
