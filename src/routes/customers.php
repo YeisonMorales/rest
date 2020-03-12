@@ -39,7 +39,7 @@ $app->get('/api/users', function(Request $request, Response $response){
 $app->get('/api/user/{id}', function(Request $request, Response $response){
     $id = $request->getAttribute('id');
 
-    $sql = "SELECT * FROM customers WHERE cedula = $cedula";
+    $sql = "SELECT * FROM usuario WHERE cedula = $id";
 
     try{
         // Get DB Object
